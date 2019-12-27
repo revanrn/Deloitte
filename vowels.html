@@ -2,10 +2,19 @@
 <head>
 <title>Vowels</title>
 </head>
-<body>
-<h3>Enter a String : <input type="text" id="txtName"/></h3><br/><br/>
+<body >
+<h3>Enter a String : <input type="text" id="txtName" onfocus="changeColor(this)" onblur="changeColorr(this)"/></h3><br/><br/>
+<h3>Enter a String : <input type="text" id="txtName1" onfocus="changeColor(this)" onblur="changeColorr(this)"/></h3><br/><br/>
 <input type="button" value="Count" onclick="checkVowels()"/>
 <script>
+function changeColor(ele){
+ele.style.color="red";
+ele.style.backgroundColor="black";
+}
+function changeColorr(ele){
+ele.style.color="black";
+ele.style.backgroundColor="white";
+}
 function checkVowels(){
 var str=document.getElementById("txtName").value;
 
@@ -28,7 +37,8 @@ for(var i=0;i<=str.length-1;i++){
 	else if(str.charAt(i)=='o'||str.charAt(i)=='O'){
 		counto++;
 		count++;}
-	else if(str.charAt(i)=='u'||str.charAt(i)=='U'){
+	else if(str.charAt(i)=='u'||str.charAt(i)==
+	'U'){
 		countu++;
 		count++;}
 	
