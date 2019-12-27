@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Vowels</title>
+</head>
+<body>
+<h3>Enter a String : <input type="text" id="txtName"/></h3><br/><br/>
+<input type="button" value="Count" onclick="checkVowels()"/>
+<script>
+function checkVowels(){
+var str=document.getElementById("txtName").value;
+
+var counta=0;
+var counte=0;
+var counti=0;
+var counto=0;
+var countu=0;
+var count=0;
+for(var i=0;i<=str.length-1;i++){
+	if(str.charAt(i)=='a'||str.charAt(i)=='A'){
+		counta++;
+		count++;}
+	else if(str.charAt(i)=='e'||str.charAt(i)=='E'){
+		counte++;
+		count++;}
+	else if(str.charAt(i)=='i'||str.charAt(i)=='I'){
+		counti++;
+		count++;}
+	else if(str.charAt(i)=='o'||str.charAt(i)=='O'){
+		counto++;
+		count++;}
+	else if(str.charAt(i)=='u'||str.charAt(i)=='U'){
+		countu++;
+		count++;}
+	
+	}
+if(count==0){
+	alert("No Vowels Found");}
+else{
+	alert("Number of Vowels are : "+count+"\nA :"+counta+"\nE :"+counte+"\nI :"+counti+"\nO :"+counto+"\nU :"+countu);}
+}
+</script>
+</body>
+</html>
